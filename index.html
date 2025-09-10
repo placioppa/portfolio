@@ -8,6 +8,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/timeline.css" />
+		<link rel="stylesheet" href="assets/css/accordion.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
 	</head>
 	<body class="is-preload">
 
@@ -42,7 +45,7 @@
 						<div class="content">
 							<h3>About me</h3>
 							<p class="justify">I connect technical decisions with business goals, combining hands-on technical experience with a strategic approach to deliver solutions that last.</p>
-							<p class="read-more">
+							<p id="aboutMe" class="read-more" onclick="toggleSection(this.id)">
 								<i>Read more</i>
 							</p>
 						</div>
@@ -53,9 +56,9 @@
 							<h3>My work</h3>
 							<p class="justify">
 								Over the last 12 years, I’ve worked across industries such as telecommunications, logistics, construction, and retail, 
-								adopting different roles that helped improve my competences, and succeeding in both technical and business fields.
+								adopting different roles that helped improve my competences, and succeed in both technical and business fields.
 							</p>
-							<p class="read-more">
+							<p id="myWork" class="read-more" onclick="toggleSection(this.id)">
 								<i>Read more</i>
 							</p>
 						</div>
@@ -65,7 +68,7 @@
 						<div class="content">
 							<h3>C&C (Competences and Certifications)</h3>
 							<p class="justify">A walk through the abilities I have acquired over the years, and those I am seeking to improve.</p>
-							<p class="read-more">
+							<p id="competences" class="read-more" onclick="toggleSection(this.id)">
 								<i>Read more</i>
 							</p>
 						</div>
@@ -75,7 +78,7 @@
 						<div class="content">
 							<h3>What's next?</h3>
 							<p class="justify">On a personal note, an overview of my current "explorations"</p>
-							<p class="read-more">
+							<p id="next" class="read-more" onclick="toggleSection(this.id)">
 								<i>Read more</i>
 							</p>
 						</div>
@@ -113,6 +116,178 @@
 
 				</div>
 			</div>
+			
+		
+		<!-- About me Modal -->
+			<div id="block_aboutMe" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h2>About me</h2>
+				<p class="justify">
+					As a Solution Architect with a background in software engineering and a strong focus on aligning technology with real business needs, 
+					I have led system transformations and end-to-end implementations across industries such as telecommunications, logistics, and construction. 
+					Over the years, I have learned to combine hands-on technical work with a strategic mindset, ensuring that technology choices are both robust and meaningful 
+					within the organization context.
+				</p>
+			  </div>
+			</div>
+			
+		<!-- My Work Modal -->
+			<div id="block_myWork" class="modal">
+				<div class="modal-content modal-large">
+				<span class="close">&times;</span>
+				<h2>My Work</h2>
+				
+					<div class="accordion">
+						<div class="accordion-item">
+						  <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Summary</span><span class="icon" aria-hidden="true"></span></button>
+						  <div class="accordion-content">
+							<div class="block-list">
+								<div class="block-list-header"><i class="fas fa-route"></i>Challenges</div>
+								<div class="block-list-content">
+									<ul>
+										<li>Aligning multiple teams and stakeholders around common architectural goals.</li>
+										<li>Handling large volumes of unstructured data (20GB+), often non-normalized and geo-referenced with different coordinate systems.</li>
+										<li>Integrating data from external platforms and tools such as OpenComms Designer, QGIS, and other GIS-based services.</li>
+										<li>Ensuring continuous data synchronization after migrations.</li>
+										<li>Managing projects with high rotation/turnover rates while keeping teams stable and productive.</li>
+										<li>Delivering solutions under short deadlines and resource constraints.</li>
+										<li>Balancing immediate delivery needs with long-term system scalability.</li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="block-list">
+								<div class="block-list-header"><i class="fas fa-star"></i>Achievements</div>
+								<div class="block-list-content">
+									<ul>
+										<li>Improved product owners' visibility into their products' maturity by developing a Quality Control module synchronized with LeanIX.</li>
+										<li>Simplified access to technology standards and security policies by integrating Azure AI Services into the company’s documentation platform.</li>
+										<li>Delivered an end-to-end solution covering the integration design, administration, and maintenance of a fiber-optic network engineering process.</li>
+										<li>Successfully led three cross-functional teams, resulting in effective internal collaboration and accelerated professional development</li>
+										<li>Incorporated critical business functionalities into a concrete analysis solution and enhanced the usability of multiple modules</li>
+										<li>Enhanced the integration capabilities of a fiber-optic network engineering company with 3rd-party providers.</li>
+										<li>Boosted the performance and user experience of a license management software within six months.</li>
+										<li>Maintained a six-person team despite 80% turnover in the overall project</li>
+										<li>Ensured the consistency, scalability, and robustness of every solution and module developed</li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="block-list">
+								<div class="block-list-header"><i class="fas fa-universal-access"></i></i>Impact</div>
+								<div class="block-list-content">
+									<ul>
+										<li>Improved decision-making and governance by providing an updated overview of the architecture compliance</li>
+										<li>Enabled faster and more reliable product releases by reducing alignment gaps</li>
+										<li>Supported business growth through innovative services and new product offerings</li>
+										<li>Reduced operational inefficiencies by automating data migration and synchronization.</li>
+										<li>Improved team collaboration and professional development across multiple cross-functional teams.</li>
+										<li>Ensured long-term system scalability and smoother onboarding by using widely adopted technology stacks.</li>
+										<li>Strengthened business-IT alignment, ensuring technical roadmaps supported strategic objectives.</li>
+									</ul>
+								</div>
+							</div>
+							
+						  </div>
+						</div>
+						
+						<div class="accordion-item">
+							<button id="accordion-button-1" aria-expanded="true"><span class="accordion-title">Timeline</span><span class="icon" aria-hidden="true"></span></button>
+							<div class="accordion-content">
+								<div class="timeline">
+									<ul>
+										<li>
+											<div class="content">
+												<h3>Solution Architect @ MSC Technology</h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
+													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
+													nemo consequatur nihil incidunt provident et.
+												</p>
+											</div>
+											<div class="time">
+												<h4>Present</h4>
+											</div>
+										</li>
+										<li>
+											<div class="content">
+												<h3>Software Development Manager @ Woolka</h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
+													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
+													nemo consequatur nihil incidunt provident et.
+												</p>
+											</div>
+											<div class="time">
+												<h4>Dec 2022 – May 2024</h4>
+											</div>
+										</li>
+										<li>
+											<div class="content">
+												<h3>Software Engineer @ Self-Employed</h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
+													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
+													nemo consequatur nihil incidunt provident et.
+												</p>
+											</div>
+											<div class="time">
+												<h4>Jan 2018 – Dec 2022</h4>
+											</div>
+										</li>
+										<li>
+											<div class="content">
+												<h3>Technical Lead @ Globant </h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
+													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
+													nemo consequatur nihil incidunt provident et.
+												</p>
+											</div>
+											<div class="time">
+												<h4>Nov 2019 – Mar 2021</h4>
+											</div>
+										</li>
+										<li>
+											<div class="content">
+												<h3>Software Developer @ Cencosud </h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
+													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
+													nemo consequatur nihil incidunt provident et.
+												</p>
+											</div>
+											<div class="time">
+												<h4>Oct 2018 – Nov 2019</h4>
+											</div>
+										</li>
+										<li>
+											<div class="content">
+												<h3>Software Developer @ String Sistemas </h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
+													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
+													nemo consequatur nihil incidunt provident et.
+												</p>
+											</div>
+											<div class="time">
+												<h4>Feb 2014 – Jan 2018</h4>
+											</div>
+										</li>
+										<div style="clear: both;"></div>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<div class="accordion-item">
+							<button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Demos</span><span class="icon" aria-hidden="true"></span></button>
+							<div class="accordion-content">
+							
+							</div>
+						</div>
+					</div>
+				
+
+								
+				</div>
+			</div>
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -122,4 +297,46 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+	<script>
+		const aboutMe = "aboutMe";
+		const myWork = "myWork";
+		const competences = "competences";
+		const next = "next";
+		const items = document.querySelectorAll(".accordion button");
+		
+		function toggleSection(id){
+			const blockId = "#block_" + id;
+			$(blockId).fadeIn(600);
+		}
+
+		// ------ ACCORDION ------ //
+		function toggleAccordion() {
+		  const itemToggle = this.getAttribute('aria-expanded');
+		  
+		  for (i = 0; i < items.length; i++) {
+			items[i].setAttribute('aria-expanded', 'false');
+		  }
+		  
+		  if (itemToggle == 'false') {
+			this.setAttribute('aria-expanded', 'true');
+		  }
+		}
+
+		items.forEach(item => item.addEventListener('click', toggleAccordion));
+		// ------ ACCORDION ------ //
+		
+		$(document).ready(function() {
+		  $('.close').on('click', function() {
+			$('.modal').fadeOut();
+		  });
+
+		  // Optional: close modal when clicking outside of it
+		  $(window).on('click', function(event) {
+			if ($(event.target).is('.modal')) {
+			  $('.modal').fadeOut();
+			}
+		  });
+		});
+
+	</script>
 </html>
