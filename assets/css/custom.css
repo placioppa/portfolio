@@ -32,12 +32,16 @@
 
 .modal-content {
   background-color: #fff;
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 30px;
   border-radius: 5px;
   width: 50%;
 }
 
+.modal-medium {
+	margin: 5% auto !important;
+	width: 60% !important;
+}
 .modal-large {
 	width: 75% !important;
 	margin: 2% auto !important;
@@ -60,6 +64,7 @@
    flex-direction: column;
    padding: 20px;
    background-color: whitesmoke;
+   margin-bottom: 5px;
 }
 
 .block-list-header {
@@ -124,12 +129,17 @@
     z-index: 0;
     transition: width 0.5s;
 	border: solid 2px whitesmoke;
+	opacity: .7;
 	
 	background: linear-gradient(
         #efefef,
         #efefef var(--line-offset),
         #021919 var(--line-offset)
     );
+}
+
+.gallery .tab:hover{
+	opacity:1;
 }
 
 .gallery .tab img {
@@ -189,4 +199,32 @@
 .gallery .content img {
     height: auto;
     height: 100%;  
+}
+
+/* ------- FILE ------- */
+
+.file-display {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+}
+.file-display div {
+	width: 50%;
+    justify-content: center;
+}
+.file-display div a {
+	cursor: pointer;
+	color: unset;
+	display: flex;
+	flex-direction: column;
+	width: 140px;
+    text-align: center;
+	border: none !important;
+}
+.file-display a:hover i {
+	color: crimson;
+}
+.file-display div i {
+	font-size: 3em;
 }
