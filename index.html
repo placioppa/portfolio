@@ -193,7 +193,7 @@
 						</div>
 						
 						<div class="accordion-item">
-							<button id="accordion-button-1" aria-expanded="true"><span class="accordion-title">Timeline</span><span class="icon" aria-hidden="true"></span></button>
+							<button id="accordion-button-timeline" aria-expanded="true"><span class="accordion-title">Timeline</span><span class="icon" aria-hidden="true"></span></button>
 							<div class="accordion-content">
 								<div class="timeline">
 									<ul>
@@ -276,9 +276,92 @@
 						</div>
 						
 						<div class="accordion-item">
-							<button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Demos</span><span class="icon" aria-hidden="true"></span></button>
+							<button id="accordion-button-demo" aria-expanded="false"><span class="accordion-title">Demos</span><span class="icon" aria-hidden="true"></span></button>
 							<div class="accordion-content">
-							
+								 <div class="gallery">
+									<div class="full-view"></div>
+									<div class="preview-list">
+										<ul>
+											<li>
+												<input type="radio" id="tab-1" name="gallery-group">
+												<label for="tab-1">
+													<div class="tab">
+														<img src="images/Slide3.jpg" />
+													</div>
+												</label>
+												<div class="content">
+													<img src="images/Slide3.jpg" />
+												</div>
+											</li>
+											<li>
+												<input type="radio" id="tab-2" name="gallery-group">
+												<label for="tab-2">
+													<div class="tab">
+														<img src="images/Slide4.jpg" />
+													</div>
+												</label>
+												<div class="content">
+													<img src="images/Slide4.jpg" />
+												</div>
+											</li>
+											<li>
+												<input type="radio" id="tab-3" name="gallery-group">
+												<label for="tab-3">
+													<div class="tab">
+														<img src="images/Slide5.jpg" />
+													</div>
+												</label>
+												<div class="content">
+													<img src="images/Slide5.jpg" />
+												</div>
+											</li>
+											<li>
+												<input type="radio" id="tab-4" name="gallery-group" checked>
+												<label for="tab-4">
+													<div class="tab">
+														<img src="images/Slide6.jpg" />
+													</div>
+												</label>
+												<div class="content">
+													<img src="images/Slide6.jpg" />
+												</div>
+											</li>
+											<li>
+												<input type="radio" id="tab-5" name="gallery-group" checked>
+												<label for="tab-5">
+													<div class="tab">
+														<img src="images/Slide7.jpg" />
+													</div>
+												</label>
+												<div class="content">
+													<img src="images/Slide7.jpg" />
+												</div>
+											</li>
+											<li>
+												<input type="radio" id="tab-6" name="gallery-group" checked>
+												<label for="tab-6">
+													<div class="tab">
+														<img src="images/Slide8.jpg" />
+													</div>
+												</label>
+												<div class="content">
+													<img src="images/Slide8.jpg" />
+												</div>
+											</li>
+											<li>
+												<input type="radio" id="tab-7" name="gallery-group" checked>
+												<label for="tab-7">
+													<div class="tab">
+														<img src="images/Slide9.jpg" />
+													</div>
+												</label>
+												<div class="content">
+													<img src="images/Slide9.jpg" />
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -323,7 +406,19 @@
 		}
 
 		items.forEach(item => item.addEventListener('click', toggleAccordion));
+		
+		
+		
+		$('#accordion-button-demo').on('click', function() {
+		  const expanded = $(this).attr('aria-expanded') === 'true';
+
+		  // Find the related gallery inside the next .accordion-content
+		  const gallery = $(this).next('.accordion-content').find('.gallery');
+
+		  gallery.toggleClass("show", expanded);
+		});
 		// ------ ACCORDION ------ //
+		
 		
 		$(document).ready(function() {
 		  $('.close').on('click', function() {
