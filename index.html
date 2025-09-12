@@ -41,44 +41,44 @@
 
 				<div class="box alt container">
 					<section class="feature left">
-						<a class="image icon solid fa-address-card"><img src="images/pic01.jpg" alt="" /></a>
+						<a data-groupid="aboutMe" onclick="toggleSection(this.dataset.groupid)" class="image icon solid fa-address-card"><img src="images/pic01.jpg" alt="" /></a>
 						<div class="content">
 							<h3>About me</h3>
 							<p class="justify">I connect technical decisions with business goals, combining hands-on technical experience with a strategic approach to deliver solutions that last.</p>
-							<p id="aboutMe" class="read-more" onclick="toggleSection(this.id)">
+							<p data-groupid="aboutMe" class="read-more" onclick="toggleSection(this.dataset.groupid)">
 								<i>Read more</i>
 							</p>
 						</div>
 					</section>
 					<section class="feature right">
-						<a href="#" class="image icon solid fa-code-branch"><img src="images/pic02.jpg" alt="" /></a>
+						<a data-groupid="myWork" onclick="toggleSection(this.dataset.groupid)" class="image icon solid fa-code-branch"><img src="images/pic02.jpg" alt="" /></a>
 						<div class="content">
 							<h3>My work</h3>
 							<p class="justify">
 								Over the last 12 years, I’ve worked across industries such as telecommunications, logistics, construction, and retail, 
 								adopting different roles that helped improve my competences, and succeed in both technical and business fields.
 							</p>
-							<p id="myWork" class="read-more" onclick="toggleSection(this.id)">
+							<p data-groupid="myWork" class="read-more" onclick="toggleSection(this.dataset.groupid)">
 								<i>Read more</i>
 							</p>
 						</div>
 					</section>
 					<section class="feature left">
-						<a href="#" class="image icon solid fa-trophy"><img src="images/pic03.jpg" alt="" /></a>
+						<a data-groupid="competences" onclick="toggleSection(this.dataset.groupid)" class="image icon solid fa-trophy"><img src="images/pic03.jpg" alt="" /></a>
 						<div class="content">
 							<h3>C&C (Competences and Certifications)</h3>
 							<p class="justify">A walk through the abilities I have acquired over the years, and those I am seeking to improve.</p>
-							<p id="competences" class="read-more" onclick="toggleSection(this.id)">
+							<p data-groupid="competences" class="read-more" onclick="toggleSection(this.dataset.groupid)">
 								<i>Read more</i>
 							</p>
 						</div>
 					</section>
 					<section class="feature right">
-						<a href="#" class="image icon solid fa-spinner"><img src="images/pic04.jpg" alt="" /></a>
+						<a data-groupid="whatElse" onclick="toggleSection(this.dataset.groupid)" class="image icon solid fa-spinner"><img src="images/pic04.jpg" alt="" /></a>
 						<div class="content">
-							<h3>What's next?</h3>
+							<h3>What else...?</h3>
 							<p class="justify">On a personal note, an overview of my current "explorations"</p>
-							<p id="next" class="read-more" onclick="toggleSection(this.id)">
+							<p data-groupid="whatElse" class="read-more" onclick="toggleSection(this.dataset.groupid)">
 								<i>Read more</i>
 							</p>
 						</div>
@@ -135,10 +135,10 @@
 		<!-- My Work Modal -->
 			<div id="block_myWork" class="modal">
 				<div class="modal-content modal-large">
-				<span class="close">&times;</span>
-				<h2>My Work</h2>
-				
+					<span class="close">&times;</span>
+					<h2>My Work</h2>
 					<div class="accordion">
+					
 						<div class="accordion-item">
 						  <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Summary</span><span class="icon" aria-hidden="true"></span></button>
 						  <div class="accordion-content">
@@ -146,7 +146,8 @@
 								<div class="block-list-header"><i class="fas fa-route"></i>Challenges</div>
 								<div class="block-list-content">
 									<ul>
-										<li>Aligning multiple teams and stakeholders around common architectural goals.</li>
+										<li>Aligning teams and stakeholders around common architectural goals and promoting initiatives that affect a team/product annual roadmap within a large organization</li>
+										<li>Designing a modular solution to handle visualization, integration and administration of fiber-optic networks for one of the biggest telecommunication providers in Argentina.</li>
 										<li>Handling large volumes of unstructured data (20GB+), often non-normalized and geo-referenced with different coordinate systems.</li>
 										<li>Integrating data from external platforms and tools such as OpenComms Designer, QGIS, and other GIS-based services.</li>
 										<li>Ensuring continuous data synchronization after migrations.</li>
@@ -190,89 +191,6 @@
 							</div>
 							
 						  </div>
-						</div>
-						
-						<div class="accordion-item">
-							<button id="accordion-button-timeline" aria-expanded="true"><span class="accordion-title">Timeline</span><span class="icon" aria-hidden="true"></span></button>
-							<div class="accordion-content">
-								<div class="timeline">
-									<ul>
-										<li>
-											<div class="content">
-												<h3>Solution Architect @ MSC Technology</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
-													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
-													nemo consequatur nihil incidunt provident et.
-												</p>
-											</div>
-											<div class="time">
-												<h4>Present</h4>
-											</div>
-										</li>
-										<li>
-											<div class="content">
-												<h3>Software Development Manager @ Woolka</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
-													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
-													nemo consequatur nihil incidunt provident et.
-												</p>
-											</div>
-											<div class="time">
-												<h4>Dec 2022 – May 2024</h4>
-											</div>
-										</li>
-										<li>
-											<div class="content">
-												<h3>Software Engineer @ Self-Employed</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
-													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
-													nemo consequatur nihil incidunt provident et.
-												</p>
-											</div>
-											<div class="time">
-												<h4>Jan 2018 – Dec 2022</h4>
-											</div>
-										</li>
-										<li>
-											<div class="content">
-												<h3>Technical Lead @ Globant </h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
-													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
-													nemo consequatur nihil incidunt provident et.
-												</p>
-											</div>
-											<div class="time">
-												<h4>Nov 2019 – Mar 2021</h4>
-											</div>
-										</li>
-										<li>
-											<div class="content">
-												<h3>Software Developer @ Cencosud </h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
-													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
-													nemo consequatur nihil incidunt provident et.
-												</p>
-											</div>
-											<div class="time">
-												<h4>Oct 2018 – Nov 2019</h4>
-											</div>
-										</li>
-										<li>
-											<div class="content">
-												<h3>Software Developer @ String Sistemas </h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
-													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
-													nemo consequatur nihil incidunt provident et.
-												</p>
-											</div>
-											<div class="time">
-												<h4>Feb 2014 – Jan 2018</h4>
-											</div>
-										</li>
-										<div style="clear: both;"></div>
-									</ul>
-								</div>
-							</div>
 						</div>
 						
 						<div class="accordion-item">
@@ -364,13 +282,211 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				
+						
+						<div class="accordion-item">
+						  <button id="accordion-button-recom" aria-expanded="false"><span class="accordion-title">Recommendation letters</span><span class="icon" aria-hidden="true"></span></button>
+						  <div class="accordion-content">
+							<div class="block-list">
+								<div class="block-list-content">
+									<div class="file-display">
+										<div onclick="downloadFile('assets/download/_CQ.pdf','CQ')"><a><i class="far fa-file-pdf"></i>CQ</a></div>
+										<div onclick="downloadFile('assets/download/_Koppengroup.pdf', 'Koppengroup')"><a><i class="far fa-file-pdf"></i>KOPPENGROUP</a></div>
+									</div>
+								</div>
+							</div>
+						  </div>
+						</div>
+						
+						<div class="accordion-item">
+							<button id="accordion-button-timeline" aria-expanded="true"><span class="accordion-title">Timeline</span><span class="icon" aria-hidden="true"></span></button>
+							<div class="accordion-content">
+								<div class="timeline">
+									<ul>
+										<li>
+											<div class="content">
+												<h3>Solution Architect @ MSC Technology</h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
+													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
+													nemo consequatur nihil incidunt provident et.
+												</p>
+											</div>
+											<div class="time">
+												<h4>Present</h4>
+											</div>
+										</li>
+										<li>
+											<div class="content">
+												<h3>Software Development Manager @ Woolka</h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
+													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
+													nemo consequatur nihil incidunt provident et.
+												</p>
+											</div>
+											<div class="time">
+												<h4>Dec 2022 – May 2024</h4>
+											</div>
+										</li>
+										<li>
+											<div class="content">
+												<h3>Software Engineer @ Self-Employed</h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
+													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
+													nemo consequatur nihil incidunt provident et.
+												</p>
+											</div>
+											<div class="time">
+												<h4>Jan 2018 – Dec 2022</h4>
+											</div>
+										</li>
+										<li>
+											<div class="content">
+												<h3>Technical Lead @ Globant </h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
+													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
+													nemo consequatur nihil incidunt provident et.
+												</p>
+											</div>
+											<div class="time">
+												<h4>Nov 2019 – Mar 2021</h4>
+											</div>
+										</li>
+										<li>
+											<div class="content">
+												<h3>Software Developer @ Cencosud </h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
+													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
+													nemo consequatur nihil incidunt provident et.
+												</p>
+											</div>
+											<div class="time">
+												<h4>Oct 2018 – Nov 2019</h4>
+											</div>
+										</li>
+										<li>
+											<div class="content">
+												<h3>Software Developer @ String Sistemas </h3>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, aperiam praesentium. Vel
+													ratione ad hic unde quisquam placeat doloribus nostrum corrupti voluptatem impedit, reiciendis,
+													nemo consequatur nihil incidunt provident et.
+												</p>
+											</div>
+											<div class="time">
+												<h4>Feb 2014 – Jan 2018</h4>
+											</div>
+										</li>
+										<div style="clear: both;"></div>
+									</ul>
+								</div>
+							</div>
+						</div>
 
-								
+					</div>
 				</div>
 			</div>
 
+		<!-- Competences Modal -->
+			<div id="block_competences" class="modal">
+			  <div class="modal-content modal-medium">
+				<span class="close">&times;</span>
+				<h2>Competences and Certifications</h2>
+				<div class="accordion">
+					<div class="accordion-item">
+						  <button id="accordion-button-10" aria-expanded="false"><span class="accordion-title">Architecture & Strategy</span><span class="icon" aria-hidden="true"></span></button>
+						  <div class="accordion-content">
+							<div class="block-list">
+								<div class="block-list-content">
+									<ul>
+										<li>Ability to design and govern enterprise architectures using frameworks such as TOGAF, ensuring alignment between business capabilities and IT landscapes.</li>
+										<li>Competence in building governance models and applying architecture development methods (ADM) to support long-term planning.</li>
+										<li>Proficient in leveraging development and collaboration tools (Visual Studio, Git, Postman) to support distributed teams and product delivery.</li>
+										<li>Experienced in designing complex solutions around data normalization and integration, including GIS-based systems.</li>
+										<li>Capable of adapting processes to balance speed and quality with stakeholders' needs.</li>
+									</ul>
+								</div>
+							</div>
+						  </div>
+					</div>
+					
+					<div class="accordion-item">
+						  <button id="accordion-button-20" aria-expanded="false"><span class="accordion-title">Leadership & Collaboration</span><span class="icon" aria-hidden="true"></span></button>
+						  <div class="accordion-content">
+							<div class="block-list">
+								<div class="block-list-content">
+									<ul>
+										<li>Ability to engage stakeholders at different levels to align technical solutions with business priorities.</li>
+										<li>Experienced in strategic IT planning and in promoting collaboration across multi-disciplinary teams</li>
+										<li>Competence in leading and contributing to Agile development projects, applying methodologies to ensure effective delivery</li>
+									</ul>
+								</div>
+							</div>
+						  </div>
+					</div>
+					
+					<div class="accordion-item">
+						  <button id="accordion-button-30" aria-expanded="false"><span class="accordion-title">Software Development & Engineering</span><span class="icon" aria-hidden="true"></span></button>
+						  <div class="accordion-content">
+							<div class="block-list">
+								<div class="block-list-content">
+									<ul>
+										<li>Experienced in full-stack development with .NET Core, .NET Framework, C#, and Angular.</li>
+										<li>Capable of building user-oriented applications with modern front-end technologies.</li>
+										<li>Ability to design scalable database models for SQL and NonSQL.</li>
+										<li>Competence in building scalable, resilient cloud services and solutions on Microsoft Azure, ensuring continuous integration and delivery practices.</li>
+									</ul>
+								</div>
+							</div>
+						  </div>
+					</div>
+					
+					<div class="accordion-item">
+						  <button id="accordion-button-20" aria-expanded="false"><span class="accordion-title">Languages</span><span class="icon" aria-hidden="true"></span></button>
+						  <div class="accordion-content">
+							<div class="block-list">
+								<div class="block-list-content">
+									<ul>
+										<li>Spanish (Native)</li>
+										<li>English (C1- Advanced)</li>
+										<li>Italian (Intermediate)</li>
+									</ul>
+								</div>
+							</div>
+						  </div>
+					</div>
+					
+					<div class="accordion-item">
+						  <button id="accordion-button-20" aria-expanded="true"><span class="accordion-title">Education & Certifications</span><span class="icon" aria-hidden="true"></span></button>
+						  <div class="accordion-content">
+							<div class="block-list">
+								<div class="block-list-content">
+									<ul>
+										<li>Bachelor’s degree in software engineering - 2018</li>
+										<li>TOGAF® – Architecture Practitioner - Jan 2025</li>
+										<li>IELTS General Training – C1 Level - Jan 2022</li>
+									</ul>
+								</div>
+							</div>
+						  </div>
+					</div>
+				</div>
+			  </div>
+			</div>
+
+		<!-- What else Modal -->
+			<div id="block_whatElse" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<h2>What else...?</h2>
+				<p class="justify">
+					On a personal note, I am currently preparing for an AI Fundamentals certification, using this as an opportunity to design project proposals that connect 
+					AI services with real business use cases—such as integrating Azure Search with a conversational bot enhanced by natural language understanding 
+					to improve access to internal standards and documentation.
+				</p>
+				<p class="justify">
+					Besides this, I dedicate part of my free time to exploring Unity for game design. It helps me experiment with different approaches to product development 
+					while staying up-to-date with emerging technologies.
+				</p>
+			  </div>
+			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -381,10 +497,12 @@
 
 	</body>
 	<script>
+
+	
 		const aboutMe = "aboutMe";
 		const myWork = "myWork";
 		const competences = "competences";
-		const next = "next";
+		const whatElse = "whatElse";
 		const items = document.querySelectorAll(".accordion button");
 		
 		function toggleSection(id){
@@ -419,6 +537,17 @@
 		});
 		// ------ ACCORDION ------ //
 		
+		
+		function downloadFile(url, name) {
+		  const link = document.createElement('a');
+		  link.href = url;
+		  link.target= '_blank';
+		  link.download = 'Recommentation Letter ' + name; // Optional: specify filename
+		  document.body.appendChild(link);
+		  link.click();
+		  document.body.removeChild(link);
+		}
+
 		
 		$(document).ready(function() {
 		  $('.close').on('click', function() {
